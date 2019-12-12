@@ -45,7 +45,7 @@ class Form extends React.Component {
 
     // If both values are not empty, make a POST request to server and reset the whole form
     if (post.username !== '' && post.text !== '') {
-      axios.post('http://192.168.1.39:5000/add', post)
+      axios.post('http://localhost:5000/add', post)
         .then(res => {
           console.log(res);
         })
