@@ -17,7 +17,7 @@ class Posts extends React.Component {
       if (this.state.id === '') {
         var url = 'http://localhost:5000/';
       } else {
-        url = 'http://localhost:5000/' + this.state.id;
+        var url = 'http://localhost:5000/' + this.state.id;
       }
       axios.get(url)
         .then(res => {
