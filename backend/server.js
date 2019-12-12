@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 /* Connect to database */
-var mongoDB = 'mongodb+srv://liav:liav@cluster0-idikr.mongodb.net/assignment?retryWrites=true&w=majority';
+var mongoDB = 'mongodb+srv://username:password@cluster0-idikr.mongodb.net/assignment?retryWrites=true&w=majority';
 mongoose.connect(mongoDB, { useNewUrlParser: true });
 var db = mongoose.connection;
 db.once('open', () => (console.log('MongoDB is connected')));
