@@ -14,10 +14,10 @@ class Posts extends React.Component {
   /* Makes a GET request to server at intervals */
   componentDidMount() {
     setInterval(() => {
-      if (this.state.id == '') {
-        var url = 'http://192.168.1.39:5000/';
+      if (this.state.id === '') {
+        var url = 'http://localhost:5000/';
       } else {
-        url = 'http://192.168.1.39:5000/' + this.state.id;
+        url = 'http://localhost:5000/' + this.state.id;
       }
       axios.get(url)
         .then(res => {
@@ -62,7 +62,7 @@ class Posts extends React.Component {
         </div>
 
         <div className="col s12 center-align space animation-1">
-        {this.state.id != '' &&
+        {this.state.id !== '' &&
           <a onClick={this.changeID} id="" className="btn-large white teal-text text-darken-3 waves-effect waves-teal button space-2">Show Posts from all Users</a>
         }
         {this.state.show < this.state.posts.length &&

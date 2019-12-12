@@ -44,7 +44,7 @@ class Form extends React.Component {
     };
 
     // If both values are not empty, make a POST request to server and reset the whole form
-    if (post.username != '' && post.text != '') {
+    if (post.username !== '' && post.text !== '') {
       axios.post('http://192.168.1.39:5000/add', post)
         .then(res => {
           console.log(res);
@@ -54,9 +54,9 @@ class Form extends React.Component {
     }
     // If either of the values is empty, show an error
     else {
-      if (post.username == '') {
+      if (post.username === '') {
         document.getElementById('username').className = 'invalid';
-      } if (post.text == '') {
+      } if (post.text === '') {
         document.getElementById('text').className = 'materialize-textarea invalid';
       }
     }
