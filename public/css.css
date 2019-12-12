@@ -88,7 +88,24 @@ main {
 }
 
 .post {
-  padding-top: 10px;
+  padding-top: 15px;
+  font-size: 22px;
+  line-height: 30px;
+  text-align: justify;
+}
+
+@media screen and (max-width: 992px) {
+  .post {
+    font-size: 22px;
+    line-height: 30px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .post {
+    font-size: 24px;
+    line-height: 30px;
+  }
 }
 
 .space {
@@ -115,18 +132,5 @@ main {
   }
   100% {
     opacity: 1;
-  }
-}
-
-.animation-2 {
-  animation: fade-2 2s ease-in;
-}
-
-@keyframes fade-2 {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
   }
 }

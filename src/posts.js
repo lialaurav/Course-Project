@@ -51,7 +51,7 @@ class Posts extends React.Component {
               <div id="post" className="card small animation-1">
                 <div className="card-content">
                   <i className="material-icons small left">account_circle</i> <span className="user" id={post.username} onClick={this.changeID}>{post.username}</span>
-                  <p className="post flow-text">{post.text}</p>
+                  <p className="post">{post.text}</p>
                   <div className="date">
                     <p>{dateFormat(post.created, "dd/mm/yyyy HH:MM")}</p>
                   </div>
