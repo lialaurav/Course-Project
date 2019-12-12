@@ -3,7 +3,10 @@ body {
   min-height: 110vh;
   flex-direction: column;
   background: rgb(0,121,107);
-  background: linear-gradient(0, rgba(0,121,107,1) 0%, rgba(224,242,241,1) 55%);
+  background: -moz-linear-gradient(0deg, rgba(0,121,107,1) 0%, rgba(224,242,241,1) 55%);
+  background: -webkit-linear-gradient(0deg, rgba(0,121,107,1) 0%, rgba(224,242,241,1) 55%);
+  background: linear-gradient(0deg, rgba(0,121,107,1) 0%, rgba(224,242,241,1) 55%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00796b",endColorstr="#e0f2f1",GradientType=1);
 }
 
 main {
