@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import axios from 'axios';
 import dateFormat from 'dateformat';
 
@@ -27,7 +26,6 @@ class Posts extends React.Component {
           console.log(err);
         })
       }, 1000);
-      console.log('rendered');
   }
 
   /* Updates the amount of posts that need to be shown */
@@ -37,7 +35,7 @@ class Posts extends React.Component {
 
   changeID(e) {
     this.setState({show: 2, id: e.target.id});
-    document.body.scrollTop = 0; // For Safari
+    document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   }
 
@@ -50,7 +48,8 @@ class Posts extends React.Component {
             <div className="col s12 m4" key={post.id}>
               <div id="post" className="card small animation-1">
                 <div className="card-content">
-                  <i className="material-icons small left">account_circle</i> <span className="user" id={post.username} onClick={this.changeID}>{post.username}</span>
+                  <i className="material-icons small left">account_circle</i>
+                  <span className="user" id={post.username} onClick={this.changeID}>{post.username}</span>
                   <p className="post">{post.text}</p>
                   <div className="date">
                     <p>{dateFormat(post.created, "dd/mm/yyyy HH:MM")}</p>
